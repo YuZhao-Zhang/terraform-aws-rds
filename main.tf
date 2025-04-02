@@ -48,7 +48,7 @@ resource "aws_security_group" "rds" {
     to_port     = 5432
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
-  }
+  } 
 
   tags = {
     Name = "${random_pet.random.id}-education_rds"
@@ -70,7 +70,7 @@ resource "aws_db_instance" "education" {
   instance_class         = "db.t3.micro"
   allocated_storage      = 5
   engine                 = "postgres"
-  engine_version         = "15.6"
+  engine_version         = "15.7"
   username               = var.db_username
   password               = var.db_password
   db_subnet_group_name   = aws_db_subnet_group.education.name
