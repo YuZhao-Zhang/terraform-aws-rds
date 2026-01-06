@@ -61,7 +61,7 @@ resource "aws_db_parameter_group" "education" {
 
   parameter {
     name  = "log_connections"
-    value = "1"
+    value = "all"
   }
 }
 
